@@ -20,18 +20,18 @@ class Image(models.Model):
         ''' method to save an image post instance '''
         self.save()
 
-    # def delete_image(self):
-    #     '''method to delete an image post instance '''
-    #     self.delete()
+    def delete_image(self):
+        '''method to delete an image post instance '''
+        self.delete()
 
-    # def update_caption(self, new_caption):
-    #     ''' method to update an image's caption '''
-    #     self.caption = new_caption
-    #     self.save()
+    def update_caption(self, new_caption):
+        ''' method to update an image's caption '''
+        self.caption = new_caption
+        self.save()
 
-    # @classmethod
-    # def get_user_images(cls, user_id):
-    #     ''' method to retrieve all images'''
-    #     img = Image.objects.filter(profile=user_id).all()
-    #     sort = sorted(img, key=lambda t: t.created_on)
-    #     return sort
+    @classmethod
+    def get_user_images(cls, user_id):
+        ''' method to retrieve all images'''
+        img = Image.objects.filter(profile=user_id).all()
+        sort = sorted(img, key=lambda t: t.created_on)
+        return sort
