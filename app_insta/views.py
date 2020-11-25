@@ -24,19 +24,19 @@ def user(request, user_id):
     pics = Image.objects.filter(profile=user_id).all()    
     return render(request, 'user.html', {'pics':pics, 'users':users}) 
 
-# @login_required(login_url='/accounts/login/')
-# def new_image(request):
-#     current_user = request.user.profile
-#     if request.method == 'POST':
-#         form = uploadForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             image = form.save(commit=False)
-#             image.profile = current_user
-#             image.save()
-#         return redirect('feed')
-#     else:
-#         form = uploadForm()
-#     return render(request, 'new_image.html', {'form':form})
+@login_required(login_url='/accounts/login/')
+def new_image(request):
+    current_user = request.user.profile
+    if request.method == 'POST':
+        form = uploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.save(commit=False)
+            image.profile = current_user
+            image.save()
+        return redirect('feed')
+    else:
+        form = uploadForm()
+    return render(request, 'new_image.html', {'form':form})
 
 # @login_required(login_url='accounts/login')
 # def comments(request, id):
