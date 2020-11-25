@@ -50,9 +50,9 @@ class Profile(models.Model):
         ''' method to save a user's profile '''
         self.save()
 
-#     def delete_profile(self):
-#         '''method to delete a user's profile '''
-#         self.delete()
+    def delete_profile(self):
+        '''method to delete a user's profile '''
+        self.delete()
 
 #     def update_bio(self, new_bio):
 #         ''' method to update a users profile bio '''
