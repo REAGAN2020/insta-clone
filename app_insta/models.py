@@ -76,12 +76,12 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 
-# class Comment(models.Model):
-#     ''' a model for comments'''
-#     related_post = models.ForeignKey('Image', on_delete=models.CASCADE)
-#     name = models.ForeignKey('Profile', on_delete=models.CASCADE)
-#     comment_body = models.TextField()
-#     created_on = models.DateTimeField(auto_now_add=True)
+class Comment(models.Model):
+    ''' a model for comments'''
+    related_post = models.ForeignKey('Image', on_delete=models.CASCADE)
+    name = models.ForeignKey('Profile', on_delete=models.CASCADE)
+    comment_body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
 
 #     class Meta:
 #         ordering = ['created_on']
