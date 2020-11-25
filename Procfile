@@ -1,1 +1,0 @@
-web: gunicorn project_insta.wsgi --log-file -
