@@ -37,11 +37,11 @@ class Image(models.Model):
         return sort
 
 
-# class Profile(models.Model):
-#     ''' extended User model '''
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     photo = models.ImageField(upload_to='avatars/')
-#     bio = models.TextField(max_length=500, blank=True, default=f'Hello, follow and like!')
+class Profile(models.Model):
+    ''' extended User model '''
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='avatars/')
+    bio = models.TextField(max_length=500, blank=True, default=f'Hello, follow and like!')
 
 #     def __str__(self):
 #         return f'{self.user.username}'
