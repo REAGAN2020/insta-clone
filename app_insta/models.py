@@ -54,10 +54,10 @@ class Profile(models.Model):
         '''method to delete a user's profile '''
         self.delete()
 
-#     def update_bio(self, new_bio):
-#         ''' method to update a users profile bio '''
-#         self.bio = new_bio
-#         self.save()
+    def update_bio(self, new_bio):
+        ''' method to update a users profile bio '''
+        self.bio = new_bio
+        self.save()
 
 #     def update_image(self, user_id, new_image):
 #         ''' method to update a users profile image '''
