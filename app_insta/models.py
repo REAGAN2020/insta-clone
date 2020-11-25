@@ -83,12 +83,12 @@ class Comment(models.Model):
     comment_body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
-#     class Meta:
-#         ordering = ['created_on']
+    class Meta:
+        ordering = ['created_on']
 
-#     def save_comments(self):
-#         ''' method to save comment instance '''
-#         self.save()
+    def save_comments(self):
+        ''' method to save comment instance '''
+        self.save()
 
 #     def delete_comment(self):
 #         '''method to delete comment instance '''
