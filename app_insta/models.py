@@ -40,8 +40,8 @@ class Image(models.Model):
 class Profile(models.Model):
     ''' extended User model '''
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    photo = models.ImageField(default='default.jpg', upload_to='avatars/')
-    bio = models.TextField(max_length=500, blank=True, default=f'Hello, I am new here!')
+    photo = models.ImageField(upload_to='avatars/')
+    bio = models.TextField(max_length=500, blank=True, default=f'Hello, follow and like!')
 
     def __str__(self):
         return f'{self.user.username}'
