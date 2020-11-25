@@ -90,9 +90,9 @@ class Comment(models.Model):
         ''' method to save comment instance '''
         self.save()
 
-#     def delete_comment(self):
-#         '''method to delete comment instance '''
-#         self.delete()
+    def delete_comment(self):
+        '''method to delete comment instance '''
+        self.delete()
     
 #     def edit_comment(self, new_comment):
 #         ''' method to edit a comment '''
