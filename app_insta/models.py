@@ -43,12 +43,12 @@ class Profile(models.Model):
     photo = models.ImageField(upload_to='avatars/')
     bio = models.TextField(max_length=500, blank=True, default=f'Hello, follow and like!')
 
-#     def __str__(self):
-#         return f'{self.user.username}'
+    def __str__(self):
+        return f'{self.user.username}'
 
-#     def save_profile(self):
-#         ''' method to save a user's profile '''
-#         self.save()
+    def save_profile(self):
+        ''' method to save a user's profile '''
+        self.save()
 
 #     def delete_profile(self):
 #         '''method to delete a user's profile '''
