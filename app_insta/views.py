@@ -54,15 +54,15 @@ def comments(request, id):
     else:
         form = commentForm()
 
-#     maoni = Comment.objects.filter(related_post=id).all()
-#     return render(request, 'comments.html', {'maoni':maoni, 'form':form})
+    maoni = Comment.objects.filter(related_post=id).all()
+    return render(request, 'comments.html', {'maoni':maoni, 'form':form})
 
 
-# def like_post(request, post_id):
-#     current_user = request.user
-#     img = Image.objects.get(id=post_id)
-#     if img.likes.filter(id=current_user.id).exists():
-#         img.likes.remove(current_user)
-#     else:
-#         img.likes.add(current_user)
-#     return redirect('feed')
+def like_post(request, post_id):
+    current_user = request.user
+    img = Image.objects.get(id=post_id)
+    if img.likes.filter(id=current_user.id).exists():
+        img.likes.remove(current_user)
+    else:
+        img.likes.add(current_user)
+    return redirect('feed')
