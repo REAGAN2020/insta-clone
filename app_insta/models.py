@@ -99,15 +99,15 @@ class Comment(models.Model):
         self.comment_body = new_comment
         self.save()
 
-#     def __str__(self):
-#         return f'Comment by {self.name}'
+    def __str__(self):
+        return f'Comment by {self.name}'
 
 
 
-# class Relation(models.Model):
-#     ''' model for user relations: follower-following system'''
-#     follower = models.ForeignKey('Profile', related_name='following', on_delete=models.CASCADE)
-#     followed = models.ForeignKey('Profile', related_name='followers', on_delete=models.CASCADE)
+class Relation(models.Model):
+    ''' model for user relations: follower-following system'''
+    follower = models.ForeignKey('Profile', related_name='following', on_delete=models.CASCADE)
+    followed = models.ForeignKey('Profile', related_name='followers', on_delete=models.CASCADE)
 
 #     class Meta:
 #         unique_together = ('follower', 'followed')
