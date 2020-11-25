@@ -38,21 +38,21 @@ def new_image(request):
         form = uploadForm()
     return render(request, 'new_image.html', {'form':form})
 
-# @login_required(login_url='accounts/login')
-# def comments(request, id):
-#     current_user = request.user.profile
-#     post = Image.objects.filter(id=id)
+@login_required(login_url='accounts/login')
+def comments(request, id):
+    current_user = request.user.profile
+    post = Image.objects.filter(id=id)
 
-#     if request.method == 'POST':
-#         form = commentForm(request.POST)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.name = current_user
-#             comment.related_post = post
-#             comment.save()
-#         return redirect('comments')
-#     else:
-#         form = commentForm()
+    if request.method == 'POST':
+        form = commentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.name = current_user
+            comment.related_post = post
+            comment.save()
+        return redirect('comments')
+    else:
+        form = commentForm()
 
 #     maoni = Comment.objects.filter(related_post=id).all()
 #     return render(request, 'comments.html', {'maoni':maoni, 'form':form})
