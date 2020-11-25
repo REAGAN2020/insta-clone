@@ -59,11 +59,11 @@ class Profile(models.Model):
         self.bio = new_bio
         self.save()
 
-#     def update_image(self, user_id, new_image):
-#         ''' method to update a users profile image '''
-#         user = User.objects.get(id=user_id)
-#         self.photo = new_image
-#         self.save()
+    def update_image(self, user_id, new_image):
+        ''' method to update a users profile image '''
+        user = User.objects.get(id=user_id)
+        self.photo = new_image
+        self.save()
         
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):
