@@ -30,8 +30,8 @@ This is an instagram application made for the web. It mimics the functionalities
 * run migrations using the command 'python3.6 manage.py migrate'
 * Run the command 'python3.6 manage.py runserver' to run the application
 
-##Live link:
-  * https://teflon-intsa.herokuapp.com/
+## Live link :
+  * : https://teflon-intsa.herokuapp.com/
 
 ## Known Bugs
 * some functions are not working
