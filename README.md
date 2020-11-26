@@ -1,4 +1,4 @@
-# iGram
+# Insta-Clone
 
 #### By **[Owiti Reagan]** (https://github.com/REAGAN2020)
 ## Description
