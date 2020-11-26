@@ -29,6 +29,10 @@ This is an instagram application made for the web. It mimics the functionalities
 * Create an .env file in the root of the application and specify the environment variables required
 * run migrations using the command 'python3.6 manage.py migrate'
 * Run the command 'python3.6 manage.py runserver' to run the application
+
+##Live link:
+  * https://teflon-intsa.herokuapp.com/
+
 ## Known Bugs
 * some functions are not working
 ## Technologies Used
