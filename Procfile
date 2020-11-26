@@ -1,1 +1,1 @@
-web: gunicorn project_insta.wsgi --log-file -
+web: gunicorn ingram.wsgi --log-file -
